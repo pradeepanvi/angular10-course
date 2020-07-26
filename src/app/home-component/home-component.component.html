@@ -1,0 +1,34 @@
+<p>{{title}}</p>
+
+<h1>Data Binding</h1>
+<div [innerHtml]="newHtml"></div>
+<button [disabled]="btnState">Button</button>
+<button [ngClass]="active">Active Class Button</button>
+
+<h1>Event Binding</h1>
+<input type="text" (change)="changeVal($event)">
+<button (click)="clickBtn($event)">Button</button>
+
+<h1>Two-Way Binding</h1>
+<input [(ngModel)]="title" type="text">
+the input ngModel sequence should be same, otherwise it won't work.
+
+<h1>Attribute Binding</h1>
+<button [attr.aria-label]="actionNameAtr">Button</button>
+
+<h1>Class Binding</h1>
+<button [class]="active">Button</button>
+<p>Single class binding</p>
+<button [class.btn]="classState">Button</button>
+
+<h1>Style Binding</h1>
+<p>Single style binding</p>
+<button [style.width]="widthStr">Button</button>
+<p>Single style binding with units</p>
+<button [style.width.px]="widthUnit">Button</button>
+<p>Multi-style binding</p>
+<button [style]="styleMulti">Button</button>
+<p>You can also pass an object</p>
+<button [style]="styleObj">Button</button>
+<p>You can also pass an Array</p>
+<button [style]="styleArray">Button</button>
