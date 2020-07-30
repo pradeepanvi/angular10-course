@@ -17,11 +17,20 @@ iframe{
     width: 100%;
     height: 400px;
 }
+.bs-sidebar{
+    position: sticky;
+    top: 4rem;
+    z-index: 1000;
+    height: calc(100vh - 4rem);
+    ul{
+        border-right: 1px solid #2b2b2d;
+    }
+}
 
 .hljs {
     display: block;
     overflow-x: auto;
-    padding: 1em;
+    padding: 0;
     background: #2b2b2d;
     color: #cdd3d8;
     -webkit-font-smoothing: antialiased;
@@ -30,7 +39,8 @@ iframe{
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
     font: 300 100%/1 Roboto Mono,monospace;
-    font-size: 16px
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .hljs>::-moz-selection {

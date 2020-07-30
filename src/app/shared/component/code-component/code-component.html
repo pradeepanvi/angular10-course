@@ -1,6 +1,7 @@
 <div class="code-snippet">
     <div class="button-bar">
-        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="copyData(code)"
+            [cdkCopyToClipboard]="code">
             <mat-icon>content_copy</mat-icon>
         </button>
     </div>
