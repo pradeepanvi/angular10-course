@@ -1,0 +1,17 @@
+@import "../assets/scss/mixins";
+
+.mat-drawer-container{
+    .mat-drawer{
+        padding: 20px;
+        .mat-drawer-inner-container{
+            ul{
+                li{
+                    margin-bottom: 10px;
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

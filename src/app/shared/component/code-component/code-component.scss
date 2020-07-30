@@ -1,0 +1,18 @@
+.code-snippet{
+    position: relative;
+    min-height: 100px;
+    background: hsla(0,0%,100%,.01);
+    border: 1px solid hsla(0,0%,100%,.2);
+    border-radius: 5px;
+    margin: 24px 0;
+    padding: 20px;
+    .button-bar{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+    .hljs {
+        background: transparent;
+    }
+}
+
