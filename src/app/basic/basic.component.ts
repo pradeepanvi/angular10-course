@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-home-component',
-  templateUrl: './home-component.component.html',
-  styleUrls: ['./home-component.component.scss'],
+  selector: 'app-basic',
+  templateUrl: './basic.component.html',
+  styleUrls: ['./basic.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class HomeComponentComponent implements OnInit {
+export class BasicComponent implements OnInit {
   title = 'This is Home Component!';
   titleC = '{{ title }}';
   newHtml = '<p>Hi This is <strong>inner HTML!</strong></p>';
@@ -58,7 +58,13 @@ export class HomeComponentComponent implements OnInit {
   actionNameAtr = 'Action Name';`;
 
   subLinks = [
-    { name: 'String Interpolation', path: '#string_interpolation' }
+    { name: 'String Interpolation', path: '#string_interpolation' },
+    { name: 'Data Binding', path: '#data_binding' },
+    { name: 'Event Binding', path: '#event_binding' },
+    { name: 'Two-Way Binding', path: '#twoway_binding' },
+    { name: 'Attribute Binding', path: '#attribute_binding' },
+    { name: 'Class Binding', path: '#class_binding' },
+    { name: 'Style Binding', path: '#style_binding' }
   ]
 
   constructor() { }

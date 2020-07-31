@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponentComponent } from './home-component/home-component.component';
+import { BasicComponent } from './basic/basic.component';
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "./shared/material.module";
@@ -16,7 +16,7 @@ import * as hljs from "highlight.js";
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponentComponent,
+    BasicComponent,
     CodeComponent,
     VisualComponent
   ],

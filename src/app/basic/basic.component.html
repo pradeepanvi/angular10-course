@@ -5,18 +5,11 @@
                 <a [href]="link.path">{{link.name}}</a>
             </li>
         </ul>
-        <p>asd sad sad</p>
-        <p>asd sad sad</p>
-
-        <p>asd sad sad</p>
-        <p>asd sad sad</p>
-        <p>asd sad sad</p>
-
     </div>
     <div class="col-md-9 col-lg-10">
         <h1>The Basics</h1>
 
-        <h3>String Interpolation</h3>
+        <h3 id="string_interpolation">String Interpolation</h3>
         <visual-d>
             <p>{{title}}</p>
         </visual-d>
@@ -38,7 +31,7 @@
             </mat-tab>
         </mat-tab-group>
 
-        <h3>Data Binding</h3>
+        <h3 id="data_binding">Data Binding</h3>
         <visual-d>
             <div [innerHtml]="newHtml"></div>
             <hr>
@@ -64,7 +57,7 @@
             </mat-tab>
         </mat-tab-group>
 
-        <h3>Event Binding</h3>
+        <h3 id="event_binding">Event Binding</h3>
         <visual-d>
             <input type="text" (change)="changeVal($event)">
             <br>
@@ -88,7 +81,7 @@
             </mat-tab>
         </mat-tab-group>
 
-        <h3>Two-Way Binding</h3>
+        <h3 id="twoway_binding">Two-Way Binding</h3>
         <p>The input ngModel sequence should be same, otherwise it won't work.</p>
         <visual-d>
             <input [(ngModel)]="title" type="text">
@@ -112,7 +105,7 @@
             </mat-tab>
         </mat-tab-group>
 
-        <h3>Attribute Binding</h3>
+        <h3 id="attribute_binding">Attribute Binding</h3>
         <visual-d>
             <button [attr.aria-label]="actionNameAtr">Button</button>
         </visual-d>
@@ -134,14 +127,14 @@
             </mat-tab>
         </mat-tab-group>
 
-        <h3>Class Binding</h3>
+        <h3 id="class_binding">Class Binding</h3>
         <visual-d>
             <button [class]="active">Button</button>
             <p>Single class binding</p>
             <button [class.btn]="classState">Button</button>
         </visual-d>
 
-        <h3>Style Binding</h3>
+        <h3 id="style_binding">Style Binding</h3>
         <visual-d>
             <p>Single style binding</p>
             <button [style.width]="widthStr">Button</button>
