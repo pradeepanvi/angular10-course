@@ -1,0 +1,345 @@
+<div class="row">
+    <div class="col-md-3 col-lg-2 bs-sidebar">
+        <ul>
+            <li *ngFor="let link of subLinks">
+                <a [href]="link.path">{{link.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9 col-lg-10">
+        <h1>Lifecycle Hooks</h1>
+        <h3 id="ngOnChanges">ngOnChanges</h3>
+        <p>Respond when Angular sets or resets data-bound input properties. The method receives a SimpleChanges object
+            of current
+            and previous property values.</p>
+
+        <p>Note that this happens very frequently, so any operation you perform here impacts performance significantly.
+            See details
+            in Using change detection hooks in this document.</p>
+        <visual-d>
+            <app-ng-on-changes></app-ng-on-changes>
+        </visual-d>
+
+        <p>Called before ngOnInit() and whenever one or more data-bound input properties change.</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnChangesH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnChangesHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnChangesHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnChangesHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngOnInit">ngOnInit</h3>
+        <p>Initialize the directive or component after Angular first displays the data-bound properties and sets the
+            directive or
+            component's input properties. See details in Initializing a component or directive in this document.</p>
+        <visual-d>
+            <app-ng-on-init></app-ng-on-init>
+        </visual-d>
+
+        <p>Called once, after the first ngOnChanges().</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnInitH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnInitHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnInitHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnInitHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngDoCheck">ngDoCheck</h3>
+        <p>Detect and act upon changes that Angular can't or won't detect on its own. See details and example in
+            Defining custom
+            change detection in this document.</p>
+        <visual-d>
+            <app-ng-do-check></app-ng-do-check>
+        </visual-d>
+
+        <p>Called immediately after ngOnChanges() on every change detection run, and immediately after ngOnInit() on the
+            first run.</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngDoCheckH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngDoCheckHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngDoCheckHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngDoCheckHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngAfterContentInit">ngAfterContentInit</h3>
+        <p>Respond after Angular projects external content into the component's view, or into the view that a directive
+            is in.</p>
+
+        <p>See details and example in Responding to changes in content in this document.</p>
+        <visual-d>
+            <app-ng-after-content-init></app-ng-after-content-init>
+        </visual-d>
+
+        <p>Called once after the first ngDoCheck().</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentInitH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentInitHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentInitHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentInitHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngAfterContentChecked">ngAfterContentChecked</h3>
+        <p>Respond after Angular checks the content projected into the directive or component.</p>
+        <p>See details and example in Responding to projected content changes in this document.</p>
+        <visual-d>
+            <app-ng-after-content-checked></app-ng-after-content-checked>
+        </visual-d>
+
+        <p>Called after ngAfterContentInit() and every subsequent ngDoCheck().</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentCheckedH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentCheckedHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentCheckedHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterContentCheckedHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngAfterViewInit">ngAfterViewInit</h3>
+        <p>Respond after Angular initializes the component's views and child views, or the view that contains the
+            directive.</p>
+
+        <p>See details and example in Responding to view changes in this document.</p>
+        <visual-d>
+            <app-ng-after-view-init></app-ng-after-view-init>
+        </visual-d>
+
+        <p>Called once after the first ngAfterContentChecked().</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewInitH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewInitHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewInitHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewInitHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngAfterViewChecked">ngAfterViewChecked</h3>
+        <p>Respond after Angular checks the component's views and child views, or the view that contains the directive.
+        </p>
+        <visual-d>
+            <app-ng-after-view-checked></app-ng-after-view-checked>
+        </visual-d>
+
+        <p>Called after the ngAfterViewInit() and every subsequent ngAfterContentChecked().</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewCheckedH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewCheckedHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewCheckedHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngAfterViewCheckedHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngOnDestroy">ngOnDestroy</h3>
+        <p>Cleanup just before Angular destroys the directive or component. Unsubscribe Observables and detach event
+            handlers to
+            avoid memory leaks. See details in Cleaning up on instance destruction in this document.
+        </p>
+        <visual-d>
+            <app-ng-on-destroy></app-ng-on-destroy>
+        </visual-d>
+
+        <p>Called immediately before Angular destroys the directive or component.</p>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnDestroyH }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnDestroyHTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnDestroyHChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngOnDestroyHTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

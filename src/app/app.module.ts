@@ -23,6 +23,15 @@ import { LocalReferenceComponent } from './component-and-databinding-deep-dive/l
 import { ViewchildComponent } from './component-and-databinding-deep-dive/viewchild/viewchild.component';
 import { NgContentComponent } from './component-and-databinding-deep-dive/ng-content/ng-content.component';
 import { ContentChildComponent } from './component-and-databinding-deep-dive/content-child/content-child.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-changes.component';
+import { NgOnInitComponent } from './lifecycle-hooks/ng-on-init/ng-on-init.component';
+import { NgDoCheckComponent } from './lifecycle-hooks/ng-do-check/ng-do-check.component';
+import { NgAfterContentInitComponent } from './lifecycle-hooks/ng-after-content-init/ng-after-content-init.component';
+import { NgAfterContentCheckedComponent } from './lifecycle-hooks/ng-after-content-checked/ng-after-content-checked.component';
+import { NgAfterViewInitComponent } from './lifecycle-hooks/ng-after-view-init/ng-after-view-init.component';
+import { NgAfterViewCheckedComponent } from './lifecycle-hooks/ng-after-view-checked/ng-after-view-checked.component';
+import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
@@ -42,7 +51,16 @@ import { ContentChildComponent } from './component-and-databinding-deep-dive/con
     LocalReferenceComponent,
     ViewchildComponent,
     NgContentComponent,
-    ContentChildComponent
+    ContentChildComponent,
+    LifecycleHooksComponent,
+    NgOnChangesComponent,
+    NgOnInitComponent,
+    NgDoCheckComponent,
+    NgAfterContentInitComponent,
+    NgAfterContentCheckedComponent,
+    NgAfterViewInitComponent,
+    NgAfterViewCheckedComponent,
+    NgOnDestroyComponent
   ],
   imports: [
     BrowserModule,
