@@ -1,0 +1,420 @@
+<div class="row">
+    <div class="col-md-3 col-lg-2 bs-sidebar">
+        <ul>
+            <li *ngFor="let link of subLinks">
+                <a [href]="link.path">{{link.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9 col-lg-10">
+        <h1>Component and Databinding Deep Dive</h1>
+        <h2>Property Binding</h2>
+        <h3 id="custom_property_binding">Custom Property Binding</h3>
+        <p>How to pass data parent to child component. Here is the solution custom property binding with @Input
+            decorator.</p>
+        <visual-d>
+            <app-deep-dive [working]="workingTxt"></app-deep-dive>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ customPropertyBinding }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ customPropertyBindingTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ customPropertyBindingChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ customPropertyBindingTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="alias_custom_property_binding">Assigning an Alias to Custom Properties</h3>
+        <p>Whenever we want to change parent custom property name but not inside name. For that we have to use
+            @Input('srcElement') and also change parent property name with [srcElement]</p>
+        <visual-d>
+            <app-alias-custom-property [srcElement]="workingTxt"></app-alias-custom-property>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomPropertyBinding }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomPropertyBindingTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomPropertyBindingChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomPropertyBindingTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h2>Event Binding</h2>
+        <h3 id="custom_event_binding">Custom Event Binding</h3>
+        <p>How to pass data from child to parent component. Here is the solution custom property binding with @Output
+            decorator.</p>
+        <visual-d>
+            <app-custom-event (customEvent)="onCustomEvent($event)"></app-custom-event>
+            <hr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Name</td>
+                        <td>Content</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let server of customEventElement">
+                        <td>{{server.type}}</td>
+                        <td>{{server.name}}</td>
+                        <td>{{server.content}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ customEventBinding }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ customEventBindingTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ customEventBindingChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ customEventBindingTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="alias_custom_event_binding">Assigning an Alias to Custom Event</h3>
+        <p>Whenever we want to change parent custom property name but not inside name. For that we have to use
+            @Output('aliasEvent') and also change parent property name with [srcElement]</p>
+        <visual-d>
+            <app-alias-custom-event (aliasEvent)="onCustomEvent($event)"></app-alias-custom-event>
+            <hr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Type</td>
+                        <td>Name</td>
+                        <td>Content</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let server of customEventElement">
+                        <td>{{server.type}}</td>
+                        <td>{{server.name}}</td>
+                        <td>{{server.content}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomEventBinding }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomEventBindingTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child Html">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomEventBindingChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ aliasCustomEventBindingTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="encapsulation_none">Encapsulation None</h3>
+        <p>Don't provide any template or style encapsulation.</p>
+        <visual-d>
+            <app-encapsulation-none></app-encapsulation-none>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ encapsulationNone }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ encapsulationNoneTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="encapsulation_shadowdom">Encapsulation Shadowdom</h3>
+        <p>ViewEncapsulation.ShadowDom instead. Use the native encapsulation mechanism of the renderer.</p>
+        <p>For the DOM this means using the deprecated Shadow DOM v0 and creating a ShadowRoot for Component's Host
+            Element.</p>
+
+        <visual-d>
+            <app-encapsulation-shadowdom></app-encapsulation-shadowdom>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ encapsulationNative }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ encapsulationNativeTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="encapsulation_emulated">Encapsulation Emulated</h3>
+        <p>Emulate Native scoping of styles by adding an attribute containing surrogate id to the Host Element and
+            pre-processing
+            the style rules provided via @link Component#styles styles or @link Component#styleUrls styleUrls, and
+            adding the
+            new Host Element attribute to all selectors.</p>
+
+        <visual-d>
+            <app-encapsulation-emulated></app-encapsulation-emulated>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ encapsulationEmulated }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ encapsulationEmulatedTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="local_reference">Local Reference</h3>
+        <p>Emulate Native scoping of styles by adding an attribute containing surrogate id to the Host Element and
+            pre-processing
+            the style rules provided via @link Component#styles styles or @link Component#styleUrls styleUrls, and
+            adding the
+            new Host Element attribute to all selectors.</p>
+
+        <visual-d>
+            <app-local-reference></app-local-reference>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ localReference }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ localReferenceTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="view_child">View Child</h3>
+        <p>Emulate Native scoping of styles by adding an attribute containing surrogate id to the Host Element and
+            pre-processing
+            the style rules provided via @link Component#styles styles or @link Component#styleUrls styleUrls, and
+            adding the
+            new Host Element attribute to all selectors.</p>
+
+        <visual-d>
+            <app-viewchild></app-viewchild>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ viewChildRef }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ viewChildRefTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ng_content">NG Content</h3>
+        <p>Emulate Native scoping of styles by adding an attribute containing surrogate id to the Host Element and
+            pre-processing
+            the style rules provided via @link Component#styles styles or @link Component#styleUrls styleUrls, and
+            adding the
+            new Host Element attribute to all selectors.</p>
+
+        <visual-d>
+            <app-ng-content>
+                <p>This content from ng content</p>
+            </app-ng-content>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngContent }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngContentTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ ngContentChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ ngContentTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="content_child">Content Child</h3>
+        <p>Emulate Native scoping of styles by adding an attribute containing surrogate id to the Host Element and
+            pre-processing
+            the style rules provided via @link Component#styles styles or @link Component#styleUrls styleUrls, and
+            adding the
+            new Host Element attribute to all selectors.</p>
+
+        <visual-d>
+            <app-content-child>
+                <p #contentChildRef>This content from ng content</p>
+            </app-content-child>
+        </visual-d>
+
+        <mat-tab-group>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ contentChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ contentChildTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ contentChildChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ contentChildTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

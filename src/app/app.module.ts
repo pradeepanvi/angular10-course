@@ -11,6 +11,18 @@ import { CodeComponent } from "../app/shared/component/code-component/code-compo
 import { VisualComponent } from './shared/component/visual/visual.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions } from "ngx-highlightjs";
 import * as hljs from "highlight.js";
+import { ComponentAndDatabindingDeepDiveComponent } from './component-and-databinding-deep-dive/component-and-databinding-deep-dive.component';
+import { DeepDiveComponent } from './component-and-databinding-deep-dive/deep-dive/deep-dive.component';
+import { AliasCustomPropertyComponent } from './component-and-databinding-deep-dive/alias-custom-property/alias-custom-property.component';
+import { CustomEventComponent } from './component-and-databinding-deep-dive/custom-event/custom-event.component';
+import { AliasCustomEventComponent } from './component-and-databinding-deep-dive/alias-custom-event/alias-custom-event.component';
+import { EncapsulationNoneComponent } from './component-and-databinding-deep-dive/encapsulation-none/encapsulation-none.component';
+import { EncapsulationEmulatedComponent } from './component-and-databinding-deep-dive/encapsulation-emulated/encapsulation-emulated.component';
+import { EncapsulationShadowdomComponent } from './component-and-databinding-deep-dive/encapsulation-shadowdom/encapsulation-shadowdom.component';
+import { LocalReferenceComponent } from './component-and-databinding-deep-dive/local-reference/local-reference.component';
+import { ViewchildComponent } from './component-and-databinding-deep-dive/viewchild/viewchild.component';
+import { NgContentComponent } from './component-and-databinding-deep-dive/ng-content/ng-content.component';
+import { ContentChildComponent } from './component-and-databinding-deep-dive/content-child/content-child.component';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
@@ -18,7 +30,19 @@ import * as hljs from "highlight.js";
     AppComponent,
     BasicComponent,
     CodeComponent,
-    VisualComponent
+    VisualComponent,
+    ComponentAndDatabindingDeepDiveComponent,
+    DeepDiveComponent,
+    AliasCustomPropertyComponent,
+    CustomEventComponent,
+    AliasCustomEventComponent,
+    EncapsulationNoneComponent,
+    EncapsulationEmulatedComponent,
+    EncapsulationShadowdomComponent,
+    LocalReferenceComponent,
+    ViewchildComponent,
+    NgContentComponent,
+    ContentChildComponent
   ],
   imports: [
     BrowserModule,
