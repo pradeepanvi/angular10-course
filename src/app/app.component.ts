@@ -8,4 +8,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-course';
+  routing = [
+    { name: 'Basic', path: '/' }
+  ]
 }
