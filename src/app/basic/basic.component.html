@@ -134,6 +134,23 @@
             <button [class.btn]="classState">Button</button>
         </visual-d>
 
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ classBinding }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ classBindingTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
         <h3 id="style_binding">Style Binding</h3>
         <visual-d>
             <p>Single style binding</p>
@@ -147,6 +164,24 @@
             <p>You can also pass an Array</p>
             <button [style]="styleArray">Button</button>
         </visual-d>
+
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Html">
+                <code-component>
+                    <div #codeData>
+                        {{ styleBinding }}
+                    </div>
+                </code-component>
+            </mat-tab>
+            <mat-tab label="TS">
+                <code-component>
+                    <div #codeData>
+                        {{ styleBindingTS }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
         <iframe src="https://stackblitz.com/edit/angular-ivy-wbh4t3?embed=1&file=src/app/app.component.ts&view=editor"
             frameborder="0"></iframe>
     </div>

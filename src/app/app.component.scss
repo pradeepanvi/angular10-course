@@ -14,4 +14,16 @@
             }
         }
     }
+    .mat-drawer-content{
+        .mat-toolbar{
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+    }
+}
+
+body{
+    background: #212121;
+    color: #ffffff;
 }

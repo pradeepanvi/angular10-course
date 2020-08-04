@@ -1,7 +1,7 @@
 <mat-drawer-container>
-    <mat-drawer #drawer mode="push">
+    <mat-drawer #drawer mode="push" (click)="drawer.toggle()">
         <ul>
-            <li><a routerLink="/">The Bascis</a></li>
+            <li *ngFor="let route of routing"><a [routerLink]="route.path">{{ route.name }}</a></li>
         </ul>
     </mat-drawer>
     <mat-drawer-content>
