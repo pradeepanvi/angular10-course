@@ -32,8 +32,6 @@ import { NgAfterContentCheckedComponent } from './lifecycle-hooks/ng-after-conte
 import { NgAfterViewInitComponent } from './lifecycle-hooks/ng-after-view-init/ng-after-view-init.component';
 import { NgAfterViewCheckedComponent } from './lifecycle-hooks/ng-after-view-checked/ng-after-view-checked.component';
 import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
-import { DirectivesDeepDriveComponent } from './directives-deep-drive/directives-deep-drive.component';
-import { AttributeDirectivesComponent } from './directives-deep-drive/attribute-directives/attribute-directives.component';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
@@ -62,9 +60,7 @@ import { AttributeDirectivesComponent } from './directives-deep-drive/attribute-
     NgAfterContentCheckedComponent,
     NgAfterViewInitComponent,
     NgAfterViewCheckedComponent,
-    NgOnDestroyComponent,
-    DirectivesDeepDriveComponent,
-    AttributeDirectivesComponent
+    NgOnDestroyComponent
   ],
   imports: [
     BrowserModule,
