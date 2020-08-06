@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
-import { SideLinksService } from "../shared/service/side-links.service";
 
 @Component({
   selector: 'app-basic',
@@ -105,6 +104,5 @@ export class BasicComponent implements OnInit {
   clickBtn(event: Event) {
     console.log(event);
   }
-
 
 }

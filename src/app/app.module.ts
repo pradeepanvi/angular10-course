@@ -32,6 +32,13 @@ import { NgAfterContentCheckedComponent } from './lifecycle-hooks/ng-after-conte
 import { NgAfterViewInitComponent } from './lifecycle-hooks/ng-after-view-init/ng-after-view-init.component';
 import { NgAfterViewCheckedComponent } from './lifecycle-hooks/ng-after-view-checked/ng-after-view-checked.component';
 import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
+import { DirectiveDeepDriveComponent } from './directive-deep-drive/directive-deep-drive.component';
+import { AttributeDirectiveComponent } from './directive-deep-drive/attribute-directive/attribute-directive.component';
+import { ComponentDirectiveComponent } from './directive-deep-drive/component-directive/component-directive.component';
+import { StructuralDirectiveComponent } from './directive-deep-drive/structural-directive/structural-directive.component';
+import { CustomStructuralDirectiveComponent } from './directive-deep-drive/custom-structural-directive/custom-structural-directive.component';
+import { UnlessDirective } from "./directive-deep-drive/custom-structural-directive/unless.directive";
+import { ParallaxScrollingDirective } from "./shared/directive/parallax-scrolling.directive";
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
@@ -60,7 +67,14 @@ import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-dest
     NgAfterContentCheckedComponent,
     NgAfterViewInitComponent,
     NgAfterViewCheckedComponent,
-    NgOnDestroyComponent
+    NgOnDestroyComponent,
+    DirectiveDeepDriveComponent,
+    AttributeDirectiveComponent,
+    ComponentDirectiveComponent,
+    StructuralDirectiveComponent,
+    CustomStructuralDirectiveComponent,
+    UnlessDirective,
+    // ParallaxScrollingDirective
   ],
   imports: [
     BrowserModule,

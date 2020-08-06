@@ -11,4 +11,5 @@ export class AppComponent {
   routing = [
     { name: 'Basic', path: '/' }
   ]
+
 }

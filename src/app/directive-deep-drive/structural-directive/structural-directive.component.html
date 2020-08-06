@@ -1,0 +1,151 @@
+<visual-d>
+    <p *ngIf="strIf">This text will show when value will true</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ ngIfD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ ngIfDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<visual-d>
+    <ng-template [ngIf]="strIf">
+        <div>This text will show when value will true</div>
+    </ng-template>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ ngTemplateIfD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ ngIfDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<visual-d>
+    <ul>
+        <li *ngFor="let person of strFor">{{ person.name}} | {{ person.age }}</li>
+    </ul>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ ngForD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ ngForDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<visual-d>
+    <ng-template ngFor let-person [ngForOf]="strFor" let-i="index">
+        <p>{{i}} {{ person.name }} and age {{ person.age }}</p>
+    </ng-template>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ ngTemplateForD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ ngForDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<visual-d>
+    <ul [ngSwitch]="ngSwitchValue">
+        <li *ngSwitchCase="'pradeep'"> Age 30</li>
+    </ul>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ ngSwitchD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ ngSwitchDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<visual-d>
+    <ul [ngSwitch]="ngSwitchValue">
+        <ng-template [ngSwitchCase]="'pradeep'">
+            <li> Age 30</li>
+        </ng-template>
+    </ul>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ ngTemplateSwitchD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ ngSwitchDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<visual-d>
+    <p>We are seeing <ng-container *ngIf="strIf">ng-container content</ng-container> structural</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ ngContainerIfD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ ngIfDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>

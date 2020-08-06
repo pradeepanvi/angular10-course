@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-3 col-lg-2 bs-sidebar">
+        <ul>
+            <li *ngFor="let link of subLinks">
+                <a [href]="link.path">{{link.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
+        <h1>Directives Deep Drive</h1>
+        <h3 id="ngOnChanges">Component Directive</h3>
+        <p>Directives with a template.</p>
+        <p>Components are the most common of the three directives.</p>
+        <visual-d>
+            <app-component-directive></app-component-directive>
+        </visual-d>
+
+        <p>We write code template inside @component decorator.</p>
+
+        <mat-tab-group>
+            <mat-tab label="Child TS">
+                <code-component>
+                    <div #codeData>
+                        {{ componentDTSChild }}
+                    </div>
+                </code-component>
+            </mat-tab>
+        </mat-tab-group>
+
+        <h3 id="ngOnChanges">Structural Directive</h3>
+        <p>Change the DOM layout by adding and removing DOM elements.</p>
+        <app-structural-directive></app-structural-directive>
+        <p>Structural Directives change the structure of the view.</p>
+
+        <h3 id="ngOnChanges">Custom Structural Directive</h3>
+        <p>Change the DOM layout by adding and removing DOM elements.</p>
+        <app-custom-structural-directive></app-custom-structural-directive>
+        <p>Structural Directives change the structure of the view.</p>
+
+    </div>
+</div>

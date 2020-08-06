@@ -1,0 +1,26 @@
+<visual-d>
+    <p *appUnless="!strIf">This text will show when value will true</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ appUnlessD }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ appUnlessDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="Unless Directive">
+        <code-component>
+            <div #codeData>
+                {{ appUnlessCustomDTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BasicComponent } from './basic/basic.component';
 import { ComponentAndDatabindingDeepDiveComponent } from './component-and-databinding-deep-dive/component-and-databinding-deep-dive.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { DirectiveDeepDriveComponent } from './directive-deep-drive/directive-deep-drive.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'lifecycle-hooks',
     component: LifecycleHooksComponent
+  },
+  {
+    path: 'directive',
+    component: DirectiveDeepDriveComponent
   }
 ];
 
