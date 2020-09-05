@@ -4,13 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BasicComponent } from './basic/basic.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from "./shared/material.module";
-import { CodeComponent } from "../app/shared/component/code-component/code-component";
+import { MaterialModule } from './shared/material.module';
+import { CodeComponent } from '../app/shared/component/code-component/code-component';
 import { VisualComponent } from './shared/component/visual/visual.component';
-import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions } from "ngx-highlightjs";
-import * as hljs from "highlight.js";
+import {
+  HighlightModule,
+  HIGHLIGHT_OPTIONS,
+  HighlightOptions,
+} from 'ngx-highlightjs';
+import * as hljs from 'highlight.js';
 import { ComponentAndDatabindingDeepDiveComponent } from './component-and-databinding-deep-dive/component-and-databinding-deep-dive.component';
 import { DeepDiveComponent } from './component-and-databinding-deep-dive/deep-dive/deep-dive.component';
 import { AliasCustomPropertyComponent } from './component-and-databinding-deep-dive/alias-custom-property/alias-custom-property.component';
@@ -37,8 +41,14 @@ import { AttributeDirectiveComponent } from './directive-deep-drive/attribute-di
 import { ComponentDirectiveComponent } from './directive-deep-drive/component-directive/component-directive.component';
 import { StructuralDirectiveComponent } from './directive-deep-drive/structural-directive/structural-directive.component';
 import { CustomStructuralDirectiveComponent } from './directive-deep-drive/custom-structural-directive/custom-structural-directive.component';
-import { UnlessDirective } from "./directive-deep-drive/custom-structural-directive/unless.directive";
-import { ParallaxScrollingDirective } from "./shared/directive/parallax-scrolling.directive";
+import { UnlessDirective } from './directive-deep-drive/custom-structural-directive/unless.directive';
+import { ParallaxScrollingDirective } from './shared/directive/parallax-scrolling.directive';
+import { PipeComponent } from './pipe/pipe.component';
+import { BuildInPipesComponent } from './pipe/build-in-pipes/build-in-pipes.component';
+import { DatePipeComponent } from './pipe/build-in-pipes/date-pipe/date-pipe.component';
+import { UpperCasePipeComponent } from './pipe/build-in-pipes/upper-case-pipe/upper-case-pipe.component';
+import { LowerCasePipeComponent } from './pipe/build-in-pipes/lower-case-pipe/lower-case-pipe.component';
+import { CurrencyPipeComponent } from './pipe/build-in-pipes/currency-pipe/currency-pipe.component';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
@@ -74,6 +84,12 @@ import { ParallaxScrollingDirective } from "./shared/directive/parallax-scrollin
     StructuralDirectiveComponent,
     CustomStructuralDirectiveComponent,
     UnlessDirective,
+    PipeComponent,
+    BuildInPipesComponent,
+    DatePipeComponent,
+    UpperCasePipeComponent,
+    LowerCasePipeComponent,
+    CurrencyPipeComponent,
     // ParallaxScrollingDirective
   ],
   imports: [
@@ -82,7 +98,7 @@ import { ParallaxScrollingDirective } from "./shared/directive/parallax-scrollin
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HighlightModule
+    HighlightModule,
   ],
   providers: [
     {
@@ -93,11 +109,11 @@ import { ParallaxScrollingDirective } from "./shared/directive/parallax-scrollin
         languages: {
           typescript: () => import('highlight.js/lib/languages/typescript'),
           css: () => import('highlight.js/lib/languages/css'),
-          xml: () => import('highlight.js/lib/languages/xml')
-        }
-      }
-    }
+          xml: () => import('highlight.js/lib/languages/xml'),
+        },
+      },
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

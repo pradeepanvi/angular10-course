@@ -24,14 +24,9 @@ export class ComponentDirectiveComponent implements OnInit {
 
 
   subLinks = [
-    { name: 'ngOnChanges', path: '#ngOnChanges' },
-    { name: 'ngOnInit', path: '#ngOnInit' },
-    { name: 'ngDoCheck', path: '#ngDoCheck' },
-    { name: 'ngAfterContentInit', path: '#ngAfterContentInit' },
-    { name: 'ngAfterContentChecked', path: '#ngAfterContentChecked' },
-    { name: 'ngAfterViewInit', path: '#ngAfterViewInit' },
-    { name: 'ngAfterViewChecked', path: '#ngAfterViewChecked' },
-    { name: 'ngOnDestroy', path: '#ngOnDestroy' }
+    { name: 'Component Directive', path: '#componentDirective' },
+    { name: 'Structural Directive', path: '#structuralDirective' },
+    { name: 'Custom Structural Directive', path: '#customStructuralDirective' },
   ]
 
   constructor() { }
