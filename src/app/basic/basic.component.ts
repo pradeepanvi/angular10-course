@@ -1,10 +1,16 @@
-import { Component, OnInit, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 @Component({
   selector: 'app-basic',
   templateUrl: './basic.component.html',
   styleUrls: ['./basic.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class BasicComponent implements OnInit {
   title = 'This is Home Component!';
@@ -12,13 +18,13 @@ export class BasicComponent implements OnInit {
   newHtml = '<p>Hi This is <strong>inner HTML!</strong></p>';
   btnState = true;
   actionNameAtr = 'Action Name';
-  active = "btn btn-primary";
+  active = 'btn btn-primary';
   classState = true;
 
   //style
-  widthStr = "500px";
+  widthStr = '500px';
   widthUnit = 500;
-  styleMulti = "width: 500px; height: 100px";
+  styleMulti = 'width: 500px; height: 100px';
   styleObj = { width: '500px', height: '100px' };
   styleArray = ['width', '500px'];
 
@@ -82,20 +88,9 @@ export class BasicComponent implements OnInit {
   styleObj = { width: '500px', height: '100px' };
   styleArray = ['width', '500px'];`;
 
-  subLinks = [
-    { name: 'String Interpolation', path: '#string_interpolation' },
-    { name: 'Data Binding', path: '#data_binding' },
-    { name: 'Event Binding', path: '#event_binding' },
-    { name: 'Two-Way Binding', path: '#twoway_binding' },
-    { name: 'Attribute Binding', path: '#attribute_binding' },
-    { name: 'Class Binding', path: '#class_binding' },
-    { name: 'Style Binding', path: '#style_binding' }
-  ];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   changeVal(event: Event) {
     console.log(event);
@@ -104,5 +99,4 @@ export class BasicComponent implements OnInit {
   clickBtn(event: Event) {
     console.log(event);
   }
-
 }

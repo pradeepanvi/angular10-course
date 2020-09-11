@@ -1,188 +1,177 @@
-<div class="row">
-    <div class="col-md-3 col-lg-2 bs-sidebar">
-        <ul>
-            <li *ngFor="let link of subLinks">
-                <a [href]="link.path">{{link.name}}</a>
-            </li>
-        </ul>
-    </div>
-    <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
-        <h1>The Basics</h1>
+<h1>The Basics</h1>
 
-        <h3 id="string_interpolation">String Interpolation</h3>
-        <visual-d>
-            <p>{{title}}</p>
-        </visual-d>
+<h3 id="string_interpolation">String Interpolation</h3>
+<visual-d>
+  <p>{{ title }}</p>
+</visual-d>
 
-        <mat-tab-group>
-            <mat-tab label="Html">
-                <code-component>
-                    <div #codeData>
-                        <p>{{ titleC }}</p>
-                    </div>
-                </code-component>
-            </mat-tab>
-            <mat-tab label="TS">
-                <code-component>
-                    <div #codeData>
-                        title = 'This is Home Component!';
-                    </div>
-                </code-component>
-            </mat-tab>
-        </mat-tab-group>
+<mat-tab-group>
+  <mat-tab label="Html">
+    <code-component>
+      <div #codeData>
+        <p>{{ titleC }}</p>
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>title = 'This is Home Component!';</div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
 
-        <h3 id="data_binding">Data Binding</h3>
-        <visual-d>
-            <div [innerHtml]="newHtml"></div>
-            <hr>
-            <button [disabled]="btnState">Button</button>
-            <hr>
-            <button [ngClass]="active">Active Class Button</button>
-        </visual-d>
+<h3 id="data_binding">Data Binding</h3>
+<visual-d>
+  <div [innerHtml]="newHtml"></div>
+  <hr />
+  <button [disabled]="btnState">Button</button>
+  <hr />
+  <button [ngClass]="active">Active Class Button</button>
+</visual-d>
 
-        <mat-tab-group dynamicHeight>
-            <mat-tab label="Html">
-                <code-component>
-                    <div #codeData>
-                        {{ dataBinding }}
-                    </div>
-                </code-component>
-            </mat-tab>
-            <mat-tab label="TS">
-                <code-component>
-                    <div #codeData>
-                        {{ dataBindingTS }}
-                    </div>
-                </code-component>
-            </mat-tab>
-        </mat-tab-group>
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Html">
+    <code-component>
+      <div #codeData>
+        {{ dataBinding }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ dataBindingTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
 
-        <h3 id="event_binding">Event Binding</h3>
-        <visual-d>
-            <input type="text" (change)="changeVal($event)">
-            <br>
-            <button (click)="clickBtn($event)">Button</button>
-        </visual-d>
+<h3 id="event_binding">Event Binding</h3>
+<visual-d>
+  <input type="text" (change)="changeVal($event)" />
+  <br />
+  <button (click)="clickBtn($event)">Button</button>
+</visual-d>
 
-        <mat-tab-group dynamicHeight>
-            <mat-tab label="Html">
-                <code-component>
-                    <div #codeData>
-                        {{ eventBinding }}
-                    </div>
-                </code-component>
-            </mat-tab>
-            <mat-tab label="TS">
-                <code-component>
-                    <div #codeData>
-                        {{ eventBindingTS }}
-                    </div>
-                </code-component>
-            </mat-tab>
-        </mat-tab-group>
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Html">
+    <code-component>
+      <div #codeData>
+        {{ eventBinding }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ eventBindingTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
 
-        <h3 id="twoway_binding">Two-Way Binding</h3>
-        <p>The input ngModel sequence should be same, otherwise it won't work.</p>
-        <visual-d>
-            <input [(ngModel)]="title" type="text">
-            <p>{{ title }}</p>
-        </visual-d>
+<h3 id="twoway_binding">Two-Way Binding</h3>
+<p>The input ngModel sequence should be same, otherwise it won't work.</p>
+<visual-d>
+  <input [(ngModel)]="title" type="text" />
+  <p>{{ title }}</p>
+</visual-d>
 
-        <mat-tab-group dynamicHeight>
-            <mat-tab label="Html">
-                <code-component>
-                    <div #codeData>
-                        {{ twowayBinding }}
-                    </div>
-                </code-component>
-            </mat-tab>
-            <mat-tab label="TS">
-                <code-component>
-                    <div #codeData>
-                        {{ twowayBindingTS }}
-                    </div>
-                </code-component>
-            </mat-tab>
-        </mat-tab-group>
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Html">
+    <code-component>
+      <div #codeData>
+        {{ twowayBinding }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ twowayBindingTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
 
-        <h3 id="attribute_binding">Attribute Binding</h3>
-        <visual-d>
-            <button [attr.aria-label]="actionNameAtr">Button</button>
-        </visual-d>
+<h3 id="attribute_binding">Attribute Binding</h3>
+<visual-d>
+  <button [attr.aria-label]="actionNameAtr">Button</button>
+</visual-d>
 
-        <mat-tab-group dynamicHeight>
-            <mat-tab label="Html">
-                <code-component>
-                    <div #codeData>
-                        {{ attrBinding }}
-                    </div>
-                </code-component>
-            </mat-tab>
-            <mat-tab label="TS">
-                <code-component>
-                    <div #codeData>
-                        {{ attrBindingTS }}
-                    </div>
-                </code-component>
-            </mat-tab>
-        </mat-tab-group>
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Html">
+    <code-component>
+      <div #codeData>
+        {{ attrBinding }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ attrBindingTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
 
-        <h3 id="class_binding">Class Binding</h3>
-        <visual-d>
-            <button [class]="active">Button</button>
-            <p>Single class binding</p>
-            <button [class.btn]="classState">Button</button>
-        </visual-d>
+<h3 id="class_binding">Class Binding</h3>
+<visual-d>
+  <button [class]="active">Button</button>
+  <p>Single class binding</p>
+  <button [class.btn]="classState">Button</button>
+</visual-d>
 
-        <mat-tab-group dynamicHeight>
-            <mat-tab label="Html">
-                <code-component>
-                    <div #codeData>
-                        {{ classBinding }}
-                    </div>
-                </code-component>
-            </mat-tab>
-            <mat-tab label="TS">
-                <code-component>
-                    <div #codeData>
-                        {{ classBindingTS }}
-                    </div>
-                </code-component>
-            </mat-tab>
-        </mat-tab-group>
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Html">
+    <code-component>
+      <div #codeData>
+        {{ classBinding }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ classBindingTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
 
-        <h3 id="style_binding">Style Binding</h3>
-        <visual-d>
-            <p>Single style binding</p>
-            <button [style.width]="widthStr">Button</button>
-            <p>Single style binding with units</p>
-            <button [style.width.px]="widthUnit">Button</button>
-            <p>Multi-style binding</p>
-            <button [style]="styleMulti">Button</button>
-            <p>You can also pass an object</p>
-            <button [style]="styleObj">Button</button>
-            <p>You can also pass an Array</p>
-            <button [style]="styleArray">Button</button>
-        </visual-d>
+<h3 id="style_binding">Style Binding</h3>
+<visual-d>
+  <p>Single style binding</p>
+  <button [style.width]="widthStr">Button</button>
+  <p>Single style binding with units</p>
+  <button [style.width.px]="widthUnit">Button</button>
+  <p>Multi-style binding</p>
+  <button [style]="styleMulti">Button</button>
+  <p>You can also pass an object</p>
+  <button [style]="styleObj">Button</button>
+  <p>You can also pass an Array</p>
+  <button [style]="styleArray">Button</button>
+</visual-d>
 
-        <mat-tab-group dynamicHeight>
-            <mat-tab label="Html">
-                <code-component>
-                    <div #codeData>
-                        {{ styleBinding }}
-                    </div>
-                </code-component>
-            </mat-tab>
-            <mat-tab label="TS">
-                <code-component>
-                    <div #codeData>
-                        {{ styleBindingTS }}
-                    </div>
-                </code-component>
-            </mat-tab>
-        </mat-tab-group>
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Html">
+    <code-component>
+      <div #codeData>
+        {{ styleBinding }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ styleBindingTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
 
-        <iframe src="https://stackblitz.com/edit/angular-ivy-wbh4t3?embed=1&file=src/app/app.component.ts&view=editor"
-            frameborder="0"></iframe>
-    </div>
-</div>
+<iframe
+  src="https://stackblitz.com/edit/angular-ivy-wbh4t3?embed=1&file=src/app/app.component.ts&view=editor"
+  frameborder="0"
+></iframe>

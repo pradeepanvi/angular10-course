@@ -1,26 +1,57 @@
 <mat-drawer-container>
-    <mat-drawer #drawer mode="push" (click)="drawer.toggle()">
-        <ul>
-            <li *ngFor="let route of routing"><a [routerLink]="route.path">{{ route.name }}</a></li>
-        </ul>
-    </mat-drawer>
-    <mat-drawer-content>
-        <mat-toolbar color="primary">
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-                mat-raised-button (click)="drawer.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <span>My App</span>
-            <span class="example-spacer"></span>
-            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                <mat-icon>favorite</mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                <mat-icon>share</mat-icon>
-            </button>
-        </mat-toolbar>
-        <div class="container-fluid">
-            <router-outlet></router-outlet>
+  <mat-drawer #drawer mode="push" (click)="drawer.toggle()">
+    <ul>
+      <li *ngFor="let route of routing">
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+        mat-raised-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+      >
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with share icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-lg-2 bs-sidebar">
+          <ul>
+            <li *ngFor="let route of routing">
+              <a [routerLink]="route.path">{{ route.name }}</a>
+              <ul>
+                <li *ngFor="let subRoute of route.children">
+                  <a [href]="subRoute.path">{{ subRoute.name }}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-    </mat-drawer-content>
+        <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
 </mat-drawer-container>
