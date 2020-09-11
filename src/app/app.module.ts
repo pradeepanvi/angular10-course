@@ -15,18 +15,6 @@ import {
   HighlightOptions,
 } from 'ngx-highlightjs';
 import * as hljs from 'highlight.js';
-import { ComponentAndDatabindingDeepDiveComponent } from './component-and-databinding-deep-dive/component-and-databinding-deep-dive.component';
-import { DeepDiveComponent } from './component-and-databinding-deep-dive/deep-dive/deep-dive.component';
-import { AliasCustomPropertyComponent } from './component-and-databinding-deep-dive/alias-custom-property/alias-custom-property.component';
-import { CustomEventComponent } from './component-and-databinding-deep-dive/custom-event/custom-event.component';
-import { AliasCustomEventComponent } from './component-and-databinding-deep-dive/alias-custom-event/alias-custom-event.component';
-import { EncapsulationNoneComponent } from './component-and-databinding-deep-dive/encapsulation-none/encapsulation-none.component';
-import { EncapsulationEmulatedComponent } from './component-and-databinding-deep-dive/encapsulation-emulated/encapsulation-emulated.component';
-import { EncapsulationShadowdomComponent } from './component-and-databinding-deep-dive/encapsulation-shadowdom/encapsulation-shadowdom.component';
-import { LocalReferenceComponent } from './component-and-databinding-deep-dive/local-reference/local-reference.component';
-import { ViewchildComponent } from './component-and-databinding-deep-dive/viewchild/viewchild.component';
-import { NgContentComponent } from './component-and-databinding-deep-dive/ng-content/ng-content.component';
-import { ContentChildComponent } from './component-and-databinding-deep-dive/content-child/content-child.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-changes.component';
 import { NgOnInitComponent } from './lifecycle-hooks/ng-on-init/ng-on-init.component';
@@ -49,6 +37,7 @@ import { DatePipeComponent } from './pipe/build-in-pipes/date-pipe/date-pipe.com
 import { UpperCasePipeComponent } from './pipe/build-in-pipes/upper-case-pipe/upper-case-pipe.component';
 import { LowerCasePipeComponent } from './pipe/build-in-pipes/lower-case-pipe/lower-case-pipe.component';
 import { CurrencyPipeComponent } from './pipe/build-in-pipes/currency-pipe/currency-pipe.component';
+import { ComponentAndDatabindingModule } from './component-and-databinding-deep-dive/component-and-databinding-deep-dive.module';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
@@ -57,18 +46,6 @@ import { CurrencyPipeComponent } from './pipe/build-in-pipes/currency-pipe/curre
     BasicComponent,
     CodeComponent,
     VisualComponent,
-    ComponentAndDatabindingDeepDiveComponent,
-    DeepDiveComponent,
-    AliasCustomPropertyComponent,
-    CustomEventComponent,
-    AliasCustomEventComponent,
-    EncapsulationNoneComponent,
-    EncapsulationEmulatedComponent,
-    EncapsulationShadowdomComponent,
-    LocalReferenceComponent,
-    ViewchildComponent,
-    NgContentComponent,
-    ContentChildComponent,
     LifecycleHooksComponent,
     NgOnChangesComponent,
     NgOnInitComponent,

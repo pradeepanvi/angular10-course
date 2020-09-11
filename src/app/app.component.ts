@@ -22,7 +22,26 @@ export class AppComponent {
         { name: 'Style Binding', path: '#style_binding' },
       ],
     },
-    { name: 'Component and Databinding', path: 'component-and-databinding' },
+    {
+      name: 'Component and Databinding',
+      path: 'component-and-databinding',
+      children: [
+        { name: 'Custom Property Binding', path: '#custom_property_binding' },
+        {
+          name: 'Alias to Custom Properties',
+          path: '#alias_custom_property_binding',
+        },
+        { name: 'Custom Event Binding', path: '#custom_event_binding' },
+        { name: 'Alias to Custom Event', path: '#alias_custom_event_binding' },
+        { name: 'Encapsulation None', path: '#encapsulation_none' },
+        { name: 'Encapsulation Shadowdom', path: '#encapsulation_shadowdom' },
+        { name: 'Encapsulation Emulated', path: '#encapsulation_emulated' },
+        { name: 'Local Reference', path: '#local_reference' },
+        { name: 'View Child', path: '#view_child' },
+        { name: 'NG Content', path: '#ng_content' },
+        { name: 'Content Child', path: '#content_child' },
+      ],
+    },
     { name: 'Lifecyle Hooks', path: 'lifecycle-hooks' },
     { name: 'Directive', path: 'directive' },
   ];

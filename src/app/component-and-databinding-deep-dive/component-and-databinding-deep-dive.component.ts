@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-component-and-databinding-deep-dive',
   templateUrl: './component-and-databinding-deep-dive.component.html',
-  styleUrls: ['./component-and-databinding-deep-dive.component.scss']
+  styleUrls: ['./component-and-databinding-deep-dive.component.scss'],
 })
 export class ComponentAndDatabindingDeepDiveComponent implements OnInit {
   workingTxt = 'yes it is';
@@ -27,7 +27,9 @@ export class ComponentAndDatabindingDeepDiveComponent implements OnInit {
   aliasCustomPropertyBindingTSChild = `
   @Input('srcElement') working: any;`;
 
-  customEventElement = [{ type: 'server', name: 'Testserver', content: 'Just a test!' }];
+  customEventElement = [
+    { type: 'server', name: 'Testserver', content: 'Just a test!' },
+  ];
   customEventBinding = `
   <app-custom-event (customEvent)="onCustomEvent($event)"></app-custom-event>
             <hr>
@@ -186,30 +188,15 @@ export class ComponentAndDatabindingDeepDiveComponent implements OnInit {
   }
   `;
 
-  subLinks = [
-    { name: 'Custom Property Binding', path: '#custom_property_binding' },
-    { name: 'Alias to Custom Properties', path: '#alias_custom_property_binding' },
-    { name: 'Custom Event Binding', path: '#custom_event_binding' },
-    { name: 'Alias to Custom Event', path: '#alias_custom_event_binding' },
-    { name: 'Encapsulation None', path: '#encapsulation_none' },
-    { name: 'Encapsulation Shadowdom', path: '#encapsulation_shadowdom' },
-    { name: 'Encapsulation Emulated', path: '#encapsulation_emulated' },
+  constructor() {}
 
-    { name: 'Local Reference', path: '#local_reference' },
-    { name: 'View Child', path: '#view_child' },
-    { name: 'NG Content', path: '#ng_content' },
-    { name: 'Content Child', path: '#content_child' },
-  ]
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onCustomEvent(serverData) {
     this.customEventElement.push({
       type: 'server',
       name: serverData.serverName,
-      content: serverData.serverContent
-    })
+      content: serverData.serverContent,
+    });
   }
 }

@@ -24,7 +24,10 @@ const routes: Routes = [
   },
   {
     path: 'component-and-databinding',
-    component: ComponentAndDatabindingDeepDiveComponent,
+    loadChildren: () =>
+      import(
+        './component-and-databinding-deep-dive/component-and-databinding-deep-dive.module'
+      ).then((m) => m.ComponentAndDatabindingModule),
   },
   {
     path: 'lifecycle-hooks',
