@@ -8,20 +8,20 @@ import { PipeComponent } from './pipe/pipe.component';
 import { DatePipeComponent } from './pipe/build-in-pipes/date-pipe/date-pipe.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: PipeComponent,
-    children: [
-      {
-        path: 'date',
-        component: DatePipeComponent,
-      },
-    ],
-  },
   // {
   //   path: '',
-  //   component: BasicComponent
+  //   component: PipeComponent,
+  //   children: [
+  //     {
+  //       path: 'date',
+  //       component: DatePipeComponent,
+  //     },
+  //   ],
   // },
+  {
+    path: '',
+    component: BasicComponent,
+  },
   {
     path: 'component-and-databinding',
     component: ComponentAndDatabindingDeepDiveComponent,
@@ -34,10 +34,10 @@ const routes: Routes = [
     path: 'directive',
     component: DirectiveDeepDriveComponent,
   },
-  {
-    path: 'pipe',
-    component: PipeComponent,
-  },
+  // {
+  //   path: 'pipe',
+  //   component: PipeComponent,
+  // },
 ];
 
 @NgModule({
