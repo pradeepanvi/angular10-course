@@ -38,14 +38,13 @@ import { UpperCasePipeComponent } from './pipe/build-in-pipes/upper-case-pipe/up
 import { LowerCasePipeComponent } from './pipe/build-in-pipes/lower-case-pipe/lower-case-pipe.component';
 import { CurrencyPipeComponent } from './pipe/build-in-pipes/currency-pipe/currency-pipe.component';
 import { ComponentAndDatabindingModule } from './component-and-databinding-deep-dive/component-and-databinding-deep-dive.module';
+import { SharedModule } from './shared/shared.module';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicComponent,
-    CodeComponent,
-    VisualComponent,
     LifecycleHooksComponent,
     NgOnChangesComponent,
     NgOnInitComponent,
@@ -76,6 +75,7 @@ import { ComponentAndDatabindingModule } from './component-and-databinding-deep-
     BrowserAnimationsModule,
     MaterialModule,
     HighlightModule,
+    SharedModule,
   ],
   providers: [
     {

@@ -11,11 +11,9 @@ import { ViewchildComponent } from './viewchild/viewchild.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { ContentChildComponent } from './content-child/content-child.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HighlightModule } from 'ngx-highlightjs';
 import { CommonModule } from '@angular/common';
 import { ComponentAndDatabindingRoutingModule } from './component-and-databinding-routing.module';
-import { CodeComponent } from '../shared/component/code-component/code-component';
-
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     ComponentAndDatabindingDeepDiveComponent,
@@ -31,8 +29,7 @@ import { CodeComponent } from '../shared/component/code-component/code-component
     NgContentComponent,
     ContentChildComponent,
   ],
-  imports: [CommonModule, ComponentAndDatabindingRoutingModule],
-  entryComponents: [CodeComponent],
+  imports: [CommonModule, ComponentAndDatabindingRoutingModule, SharedModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ComponentAndDatabindingModule {}
