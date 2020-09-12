@@ -56,6 +56,12 @@ export class AppComponent {
         { name: 'ngOnDestroy', path: '#ngOnDestroy' },
       ],
     },
-    { name: 'Directive', path: 'directive' },
+    {
+      name: 'Directive', path: 'directive', children: [
+        { name: 'Component Directive', path: '#componentDirective' },
+        { name: 'Structural Directive', path: '#structuralDirective' },
+        { name: 'Custom Structural Directive', path: '#customStructuralDirective' },
+      ]
+    },
   ];
 }

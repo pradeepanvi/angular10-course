@@ -8,16 +8,6 @@ import { PipeComponent } from './pipe/pipe.component';
 import { DatePipeComponent } from './pipe/build-in-pipes/date-pipe/date-pipe.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: PipeComponent,
-  //   children: [
-  //     {
-  //       path: 'date',
-  //       component: DatePipeComponent,
-  //     },
-  //   ],
-  // },
   {
     path: '',
     component: BasicComponent,
@@ -38,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'directive',
-    component: DirectiveDeepDriveComponent,
+    loadChildren: () => import('./directive-deep-drive/directive.module').then(m => m.DirectiveModule)
   },
   // {
   //   path: 'pipe',
@@ -50,4 +40,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -8,29 +8,16 @@
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar color="primary">
-      <button
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with menu icon"
-        mat-raised-button
-        (click)="drawer.toggle()"
-      >
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" mat-raised-button
+        (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
       <span>My App</span>
       <span class="example-spacer"></span>
-      <button
-        mat-icon-button
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon"
-      >
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
       </button>
-      <button
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with share icon"
-      >
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>share</mat-icon>
       </button>
     </mat-toolbar>
@@ -42,7 +29,7 @@
               <a [routerLink]="route.path">{{ route.name }}</a>
               <ul>
                 <li *ngFor="let subRoute of route.children">
-                  <a [href]="subRoute.path">{{ subRoute.name }}</a>
+                  <a href="{{route.path}}{{subRoute.path}}">{{ subRoute.name }}</a>
                 </li>
               </ul>
             </li>

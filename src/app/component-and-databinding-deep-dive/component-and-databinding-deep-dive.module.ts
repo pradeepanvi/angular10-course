@@ -12,8 +12,8 @@ import { NgContentComponent } from './ng-content/ng-content.component';
 import { ContentChildComponent } from './content-child/content-child.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ComponentAndDatabindingRoutingModule } from './component-and-databinding-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { ComponentAndDatabindingRoutingModule } from './component-and-databinding-routing.module';
 @NgModule({
   declarations: [
     ComponentAndDatabindingDeepDiveComponent,
@@ -32,4 +32,4 @@ import { SharedModule } from '../shared/shared.module';
   imports: [CommonModule, ComponentAndDatabindingRoutingModule, SharedModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ComponentAndDatabindingModule {}
+export class ComponentAndDatabindingModule { }

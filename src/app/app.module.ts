@@ -15,12 +15,6 @@ import {
   HighlightOptions,
 } from 'ngx-highlightjs';
 import * as hljs from 'highlight.js';
-import { DirectiveDeepDriveComponent } from './directive-deep-drive/directive-deep-drive.component';
-import { AttributeDirectiveComponent } from './directive-deep-drive/attribute-directive/attribute-directive.component';
-import { ComponentDirectiveComponent } from './directive-deep-drive/component-directive/component-directive.component';
-import { StructuralDirectiveComponent } from './directive-deep-drive/structural-directive/structural-directive.component';
-import { CustomStructuralDirectiveComponent } from './directive-deep-drive/custom-structural-directive/custom-structural-directive.component';
-import { UnlessDirective } from './directive-deep-drive/custom-structural-directive/unless.directive';
 import { ParallaxScrollingDirective } from './shared/directive/parallax-scrolling.directive';
 import { PipeComponent } from './pipe/pipe.component';
 import { BuildInPipesComponent } from './pipe/build-in-pipes/build-in-pipes.component';
@@ -37,12 +31,6 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     BasicComponent,
-    DirectiveDeepDriveComponent,
-    AttributeDirectiveComponent,
-    ComponentDirectiveComponent,
-    StructuralDirectiveComponent,
-    CustomStructuralDirectiveComponent,
-    UnlessDirective,
     PipeComponent,
     BuildInPipesComponent,
     DatePipeComponent,
@@ -77,4 +65,4 @@ import { RouterModule } from '@angular/router';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

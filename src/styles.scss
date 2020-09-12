@@ -39,8 +39,10 @@ iframe {
     top: 0;
     right: 15px;
   }
-  ul {
+  & > ul {
     padding-right: 15px;
+    height: 80vh;
+    overflow: auto;
     li {
       margin-bottom: 20px;
       a {
@@ -48,7 +50,6 @@ iframe {
       }
       ul {
         padding-left: 15px;
-        padding-right: 0px;
         li {
           margin-bottom: 5px;
         }
