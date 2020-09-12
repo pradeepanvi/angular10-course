@@ -31,7 +31,10 @@ const routes: Routes = [
   },
   {
     path: 'lifecycle-hooks',
-    component: LifecycleHooksComponent,
+    loadChildren: () =>
+      import('./lifecycle-hooks/lifecycle-hooks.module').then(
+        (m) => m.LifecycleHooksModule
+      ),
   },
   {
     path: 'directive',

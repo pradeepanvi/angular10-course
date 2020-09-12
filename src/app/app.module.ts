@@ -15,15 +15,6 @@ import {
   HighlightOptions,
 } from 'ngx-highlightjs';
 import * as hljs from 'highlight.js';
-import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
-import { NgOnChangesComponent } from './lifecycle-hooks/ng-on-changes/ng-on-changes.component';
-import { NgOnInitComponent } from './lifecycle-hooks/ng-on-init/ng-on-init.component';
-import { NgDoCheckComponent } from './lifecycle-hooks/ng-do-check/ng-do-check.component';
-import { NgAfterContentInitComponent } from './lifecycle-hooks/ng-after-content-init/ng-after-content-init.component';
-import { NgAfterContentCheckedComponent } from './lifecycle-hooks/ng-after-content-checked/ng-after-content-checked.component';
-import { NgAfterViewInitComponent } from './lifecycle-hooks/ng-after-view-init/ng-after-view-init.component';
-import { NgAfterViewCheckedComponent } from './lifecycle-hooks/ng-after-view-checked/ng-after-view-checked.component';
-import { NgOnDestroyComponent } from './lifecycle-hooks/ng-on-destroy/ng-on-destroy.component';
 import { DirectiveDeepDriveComponent } from './directive-deep-drive/directive-deep-drive.component';
 import { AttributeDirectiveComponent } from './directive-deep-drive/attribute-directive/attribute-directive.component';
 import { ComponentDirectiveComponent } from './directive-deep-drive/component-directive/component-directive.component';
@@ -39,21 +30,13 @@ import { LowerCasePipeComponent } from './pipe/build-in-pipes/lower-case-pipe/lo
 import { CurrencyPipeComponent } from './pipe/build-in-pipes/currency-pipe/currency-pipe.component';
 import { ComponentAndDatabindingModule } from './component-and-databinding-deep-dive/component-and-databinding-deep-dive.module';
 import { SharedModule } from './shared/shared.module';
+import { RouterModule } from '@angular/router';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicComponent,
-    LifecycleHooksComponent,
-    NgOnChangesComponent,
-    NgOnInitComponent,
-    NgDoCheckComponent,
-    NgAfterContentInitComponent,
-    NgAfterContentCheckedComponent,
-    NgAfterViewInitComponent,
-    NgAfterViewCheckedComponent,
-    NgOnDestroyComponent,
     DirectiveDeepDriveComponent,
     AttributeDirectiveComponent,
     ComponentDirectiveComponent,

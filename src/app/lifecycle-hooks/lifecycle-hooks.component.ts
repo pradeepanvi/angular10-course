@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-lifecycle-hooks',
   templateUrl: './lifecycle-hooks.component.html',
-  styleUrls: ['./lifecycle-hooks.component.scss']
+  styleUrls: ['./lifecycle-hooks.component.scss'],
 })
 export class LifecycleHooksComponent implements OnInit {
   ngOnChangesH = `
@@ -84,20 +84,7 @@ export class LifecycleHooksComponent implements OnInit {
   }
   `;
 
-  subLinks = [
-    { name: 'ngOnChanges', path: '#ngOnChanges' },
-    { name: 'ngOnInit', path: '#ngOnInit' },
-    { name: 'ngDoCheck', path: '#ngDoCheck' },
-    { name: 'ngAfterContentInit', path: '#ngAfterContentInit' },
-    { name: 'ngAfterContentChecked', path: '#ngAfterContentChecked' },
-    { name: 'ngAfterViewInit', path: '#ngAfterViewInit' },
-    { name: 'ngAfterViewChecked', path: '#ngAfterViewChecked' },
-    { name: 'ngOnDestroy', path: '#ngOnDestroy' }
-  ]
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

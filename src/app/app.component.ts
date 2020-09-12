@@ -42,7 +42,20 @@ export class AppComponent {
         { name: 'Content Child', path: '#content_child' },
       ],
     },
-    { name: 'Lifecyle Hooks', path: 'lifecycle-hooks' },
+    {
+      name: 'Lifecyle Hooks',
+      path: 'lifecycle-hooks',
+      children: [
+        { name: 'ngOnChanges', path: '#ngOnChanges' },
+        { name: 'ngOnInit', path: '#ngOnInit' },
+        { name: 'ngDoCheck', path: '#ngDoCheck' },
+        { name: 'ngAfterContentInit', path: '#ngAfterContentInit' },
+        { name: 'ngAfterContentChecked', path: '#ngAfterContentChecked' },
+        { name: 'ngAfterViewInit', path: '#ngAfterViewInit' },
+        { name: 'ngAfterViewChecked', path: '#ngAfterViewChecked' },
+        { name: 'ngOnDestroy', path: '#ngOnDestroy' },
+      ],
+    },
     { name: 'Directive', path: 'directive' },
   ];
 }
