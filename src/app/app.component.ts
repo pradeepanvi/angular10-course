@@ -63,5 +63,25 @@ export class AppComponent {
         { name: 'Custom Structural Directive', path: '#customStructuralDirective' },
       ]
     },
+    {
+      name: 'Pipe', path: 'pipe', routingChildren: [
+        {
+          name: 'Date Pipe', path: 'date-pipe', children: [
+            { name: 'Short', path: '#short' },
+            { name: 'Medium', path: '#medium' },
+            { name: 'Long', path: '#long' },
+            { name: 'Full', path: '#full' },
+            { name: 'Short Date', path: '#shortDate' },
+            { name: 'Medium Date', path: '#mediumDate' },
+            { name: 'Long Date', path: '#longDate' },
+            { name: 'Full Date', path: '#fullDate' },
+            { name: 'Short Time', path: '#shortTime' },
+            { name: 'Medium Time', path: '#mediumTime' },
+            { name: 'Long Time', path: '#longTime' },
+            { name: 'Full Time', path: '#fullTime' },
+          ]
+        },
+      ]
+    },
   ];
 }

@@ -1,13 +1,2 @@
-<div class="row">
-  <div class="col-md-3 col-lg-2 bs-sidebar">
-    <ul>
-      <li *ngFor="let link of subLinks">
-        <a [routerLink]="link.path">{{ link.name }}</a>
-      </li>
-    </ul>
-  </div>
-  <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
-    <h1>Pipe</h1>
-    <app-build-in-pipes></app-build-in-pipes>
-  </div>
-</div>
+<h1>Pipe</h1>
+<router-outlet></router-outlet>

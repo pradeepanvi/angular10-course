@@ -1,33 +1,42 @@
 @import "../assets/scss/mixins";
 
-.mat-drawer-container{
-    .mat-drawer{
-        padding: 20px;
-        .mat-drawer-inner-container{
-            ul{
-                li{
-                    margin-bottom: 10px;
-                    a{
-                        color: $white;
-                    }
-                }
+.mat-drawer-container {
+  .mat-drawer {
+    padding: 20px;
+    .mat-drawer-inner-container {
+      & > ul {
+        padding-right: 15px;
+        height: 100vh;
+        overflow: auto;
+        li {
+          margin-bottom: 20px;
+          a {
+            color: hsla(0, 0%, 100%, 0.5);
+          }
+          ul {
+            padding-left: 15px;
+            li {
+              margin-bottom: 5px;
             }
+          }
         }
+      }
     }
-    .mat-drawer-content{
-        .mat-toolbar{
-            position: fixed;
-            top: 0;
-            z-index: 100;
-        }
+  }
+  .mat-drawer-content {
+    .mat-toolbar {
+      position: fixed;
+      top: 0;
+      z-index: 100;
     }
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body{
-    background: #212121;
-    color: #ffffff;
+body {
+  background: #212121;
+  color: #ffffff;
 }

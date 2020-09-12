@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipe.component.scss'],
 })
 export class PipeComponent implements OnInit {
-  subLinks = [{ name: 'Date Pipe', path: 'date' }];
+  constructor() { }
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
