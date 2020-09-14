@@ -1,1 +1,44 @@
-<p>currency-pipe works!</p>
+<h3 id="currencyPipe">currency Pipe</h3>
+<p>by Default is $ sign will come.</p>
+<visual-d>
+  <p>{{ amountA | currency }}</p>
+  <p>{{ amountB | currency }}</p>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>
+        {{ currencyP }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ currencyPTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
+
+<h4 id="currencyCode">currency code</h4>
+<visual-d>
+  <p>{{ amountA | currency: "CAD" }}</p>
+  <p>{{ amountB | currency: "CAD" }}</p>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>
+        {{ currencyCodeP }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ currencyPTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>

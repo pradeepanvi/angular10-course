@@ -57,16 +57,25 @@ export class AppComponent {
       ],
     },
     {
-      name: 'Directive', path: 'directive', children: [
+      name: 'Directive',
+      path: 'directive',
+      children: [
         { name: 'Component Directive', path: '#componentDirective' },
         { name: 'Structural Directive', path: '#structuralDirective' },
-        { name: 'Custom Structural Directive', path: '#customStructuralDirective' },
-      ]
+        {
+          name: 'Custom Structural Directive',
+          path: '#customStructuralDirective',
+        },
+      ],
     },
     {
-      name: 'Pipe', path: 'pipe', routingChildren: [
+      name: 'Pipe',
+      path: 'pipe',
+      routingChildren: [
         {
-          name: 'Date Pipe', path: 'date-pipe', children: [
+          name: 'Date Pipe',
+          path: 'date-pipe',
+          children: [
             { name: 'Short', path: '#short' },
             { name: 'Medium', path: '#medium' },
             { name: 'Long', path: '#long' },
@@ -79,9 +88,25 @@ export class AppComponent {
             { name: 'Medium Time', path: '#mediumTime' },
             { name: 'Long Time', path: '#longTime' },
             { name: 'Full Time', path: '#fullTime' },
-          ]
+          ],
         },
-      ]
+        {
+          name: 'UpperCase Pipe',
+          path: 'upper-case-pipe',
+        },
+        {
+          name: 'LowerCase Pipe',
+          path: 'lower-case-pipe',
+        },
+        {
+          name: 'TitleCase Pipe',
+          path: 'title-case-pipe',
+        },
+        {
+          name: 'Currency Pipe',
+          path: 'currency-pipe',
+        },
+      ],
     },
   ];
 }
