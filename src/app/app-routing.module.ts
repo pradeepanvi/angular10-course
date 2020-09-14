@@ -23,11 +23,18 @@ const routes: Routes = [
   },
   {
     path: 'directive',
-    loadChildren: () => import('./directive-deep-drive/directive.module').then(m => m.DirectiveModule)
+    loadChildren: () =>
+      import('./directive-deep-drive/directive.module').then(
+        (m) => m.DirectiveModule
+      ),
   },
   {
     path: 'pipe',
-    loadChildren: () => import('./pipe/pipe.module').then(m => m.PipeModule)
+    loadChildren: () => import('./pipe/pipe.module').then((m) => m.PipeModule),
+  },
+  {
+    path: '**',
+    component: BasicComponent,
   },
 ];
 
@@ -35,4 +42,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets/bootstrap/scss/bootstrap.scss";
 @import "~highlight.js/styles/github.css";
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap");
 
 html,
 body {
@@ -8,7 +9,8 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Comic Neue", cursive !important;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 ul,
 ol {
@@ -52,6 +54,11 @@ iframe {
         padding-left: 15px;
         li {
           margin-bottom: 5px;
+          ul {
+            li {
+              margin-bottom: 0px;
+            }
+          }
         }
       }
     }
