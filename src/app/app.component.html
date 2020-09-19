@@ -5,7 +5,7 @@
         <a [routerLink]="route.path">{{ route.name }}</a>
         <ul *ngIf="route.children?.length > 0">
           <li *ngFor="let subRoute of route.children">
-            <a href="{{ route.path }}{{ subRoute.path }}">{{
+            <a href="#/{{ route.path }}{{ subRoute.path }}">{{
               subRoute.name
             }}</a>
           </li>
@@ -18,7 +18,9 @@
             <ul *ngIf="subRoute.children?.length > 0">
               <li *ngFor="let subChild of subRoute.children">
                 <a
-                  href="{{ route.path }}/{{ subRoute.path }}{{ subChild.path }}"
+                  href="#/{{ route.path }}/{{ subRoute.path }}{{
+                    subChild.path
+                  }}"
                   >{{ subChild.name }}</a
                 >
               </li>
@@ -48,7 +50,7 @@
               <a [routerLink]="route.path">{{ route.name }}</a>
               <ul *ngIf="route.children?.length > 0">
                 <li *ngFor="let subRoute of route.children">
-                  <a href="{{ route.path }}{{ subRoute.path }}">{{
+                  <a href="#/{{ route.path }}{{ subRoute.path }}">{{
                     subRoute.name
                   }}</a>
                 </li>
@@ -61,7 +63,7 @@
                   <ul *ngIf="subRoute.children?.length > 0">
                     <li *ngFor="let subChild of subRoute.children">
                       <a
-                        href="{{ route.path }}/{{ subRoute.path }}{{
+                        href="#/{{ route.path }}/{{ subRoute.path }}{{
                           subChild.path
                         }}"
                         >{{ subChild.name }}</a
