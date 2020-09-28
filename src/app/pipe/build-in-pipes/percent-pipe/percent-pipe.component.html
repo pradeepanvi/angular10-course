@@ -1,0 +1,45 @@
+<h3 id="percentPipe">Percent Pipe</h3>
+<visual-d>
+  <p>{{ num2 | percent }}</p>
+  <p>{{ num2 | percent: "3.1-5" }}</p>
+  <p>{{ num2 | percent: "4.5-5" }}</p>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>
+        {{ percentP }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ percentPTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
+
+<h4 id="percentPipewithTS">Percent Pipe with TS</h4>
+<visual-d>
+  <p>{{ onlyPercent }}</p>
+  <p>{{ percentWithlength }}</p>
+  <p>{{ percentWithlength2 }}</p>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>
+        {{ percentTSP }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ percentTSPTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>

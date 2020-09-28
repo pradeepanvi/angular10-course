@@ -1,0 +1,336 @@
+<h3 id="datePipe">Date Pipe</h3>
+<visual-d>
+    <p>My birthday is {{ birthday | date }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ dateP }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="TS">
+        <code-component>
+            <div #codeData>
+                {{ datePTS }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<h2>Pre-defined format options</h2>
+<ul>
+    <li>'short': equivalent to 'M/d/yy, h:mm a' (6/15/15, 9:03 AM).</li>
+    <li>'medium': equivalent to 'MMM d, y, h:mm:ss a' (Jun 15, 2015, 9:03:01 AM).</li>
+    <li>'long': equivalent to 'MMMM d, y, h:mm:ss a z' (June 15, 2015 at 9:03:01 AM GMT+1).</li>
+    <li>'full': equivalent to 'EEEE, MMMM d, y, h:mm:ss a zzzz' (Monday, June 15, 2015 at 9:03:01 AM GMT+01:00).</li>
+    <li>'shortDate': equivalent to 'M/d/yy' (6/15/15).</li>
+    <li>'mediumDate': equivalent to 'MMM d, y' (Jun 15, 2015).</li>
+    <li>'longDate': equivalent to 'MMMM d, y' (June 15, 2015).</li>
+    <li>'fullDate': equivalent to 'EEEE, MMMM d, y' (Monday, June 15, 2015).</li>
+    <li>'shortTime': equivalent to 'h:mm a' (9:03 AM).</li>
+    <li>'mediumTime': equivalent to 'h:mm:ss a' (9:03:01 AM).</li>
+    <li>'longTime': equivalent to 'h:mm:ss a z' (9:03:01 AM GMT+1).</li>
+    <li>'fullTime': equivalent to 'h:mm:ss a zzzz' (9:03:01 AM GMT+01:00).</li>
+</ul>
+
+<hr>
+<h4 id="short">Short</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'short' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'M/d/yy, h:mm a' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ shortOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ shortOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="medium">Medium</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'medium' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'MMM d,y, h:mm:ss a' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ mediumOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ mediumOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="long">Long</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'long' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'MMMM d, y, h:mm:ss a z' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ longOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ longOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="long">full</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'full' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'EEEE, MMMM d, y, h:mm:ss a zzzz' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ fullOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ fullOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="shortDate">shortDate</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'shortDate' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'M/d/yy' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ shortDateOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ shortDateOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="mediumDate">mediumDate</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'mediumDate' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'MMM d, y' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ mediumDateOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ mediumDateOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="longDate">longDate</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'longDate' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'MMMM d, y' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ longDateOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ longDateOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="fullDate">fullDate</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'fullDate' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'EEEE, MMMM d, y' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ fullDateOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ fullDateOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="shortTime">shortTime</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'shortTime' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'h:mm a' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ shortTimeOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ shortTimeOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="mediumTime">mediumTime</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'mediumTime' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'h:mm:ss a' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ mediumTimeOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ mediumTimeOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="longTime">longTime</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'longTime' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'h:mm:ss a z' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ longTimeOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ longTimeOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>
+
+<hr>
+<h4 id="fullTime">fullTime</h4>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'fullTime' }}</p>
+</visual-d>
+<visual-d>
+    <p>My birthday is {{ birthday | date:'h:mm:ss a zzzz' }}</p>
+</visual-d>
+<mat-tab-group>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ fullTimeOpt }}
+            </div>
+        </code-component>
+    </mat-tab>
+    <mat-tab label="HTML">
+        <code-component>
+            <div #codeData>
+                {{ fullTimeOpt2 }}
+            </div>
+        </code-component>
+    </mat-tab>
+</mat-tab-group>

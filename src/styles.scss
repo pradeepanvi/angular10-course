@@ -1,1 +1,219 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/bootstrap/scss/bootstrap.scss";
+@import "~highlight.js/styles/github.css";
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(123, 31, 162, 0.2);
+  -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+  &:hover {
+    background: rgba(123, 31, 162, 1);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Comic Neue", cursive !important;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.container-fluid {
+  .row {
+    [class^="col-md-"] {
+      padding-top: 100px;
+    }
+  }
+}
+iframe {
+  width: 100%;
+  height: 400px;
+}
+.bs-sidebar {
+  position: fixed;
+  height: 100vh;
+  &:after {
+    content: "";
+    width: 1px;
+    height: 100vh;
+    // background: hsla(0, 0%, 100%, 0.2);
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  & > ul {
+    padding-right: 15px;
+    height: 80vh;
+    overflow: auto;
+    li {
+      margin-bottom: 20px;
+      a {
+        color: hsla(0, 0%, 100%, 0.5);
+      }
+      ul {
+        padding-left: 15px;
+        li {
+          margin-bottom: 5px;
+          ul {
+            li {
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.table {
+  color: #ffffff;
+}
+.mat-typography {
+  h3 {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0;
+  background: #2b2b2d;
+  color: #cdd3d8;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font: 300 100%/1 Roboto Mono, monospace;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hljs > ::-moz-selection {
+  background-color: #3e4451;
+}
+
+.hljs > ::selection {
+  background-color: #3e4451;
+}
+
+.hljs-comment {
+  color: #9e9e9e;
+  font-style: italic;
+}
+
+.hljs-selector-tag {
+  color: #c792ea;
+}
+
+.hljs-string,
+.hljs-subst {
+  color: #9ccc65;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-template-variable,
+.hljs-variable {
+  color: #f77669;
+}
+
+.hljs-keyword {
+  color: #c792ea;
+}
+
+.hljs-function > .hljs-title {
+  color: #75a5ff;
+}
+
+.hljs-tag {
+  color: #ce93d8;
+}
+
+.hljs-name {
+  color: #4dd0e1;
+}
+
+.hljs-type {
+  color: #da4939;
+}
+
+.hljs-attribute {
+  color: #80cbbf;
+}
+
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-bullet,
+.hljs-link,
+.hljs-symbol {
+  color: #c792ea;
+}
+
+.hljs-params {
+  color: #eefff7;
+}
+
+.hljs-meta,
+.hljs-title {
+  color: #75a5ff;
+}
+
+.hljs-section {
+  color: #ffc66d;
+}
+
+.hljs-addition {
+  background-color: #144212;
+}
+
+.hljs-addition,
+.hljs-deletion {
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+}
+
+.hljs-selector-class {
+  color: #ffcb68;
+}
+
+.hljs-selector-id {
+  color: #f77669;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
