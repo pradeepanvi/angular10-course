@@ -18,7 +18,6 @@ import { CurrencyPipeComponent } from './build-in-pipes/currency-pipe/currency-p
 import { TitleCasePipeComponent } from './build-in-pipes/title-case-pipe/title-case-pipe.component';
 import { DecimalPipeComponent } from './build-in-pipes/decimal-pipe/decimal-pipe.component';
 import { PercentPipeComponent } from './build-in-pipes/percent-pipe/percent-pipe.component';
-import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 import { StrengthCustomPipeComponent } from './custom-pipes/strength-custom-pipe/strength-custom-pipe.component';
 import { StrengthPipe } from './custom-pipes/strength-custom-pipe/strength.pipe';
 import { FilterCustomPipeComponent } from './custom-pipes/filter-custom-pipe/filter-custom-pipe.component';
@@ -35,7 +34,6 @@ import { FilterPipe } from './custom-pipes/filter-custom-pipe/filter.pipe';
     TitleCasePipeComponent,
     DecimalPipeComponent,
     PercentPipeComponent,
-    CustomPipesComponent,
     StrengthCustomPipeComponent,
     StrengthPipe,
     FilterCustomPipeComponent,

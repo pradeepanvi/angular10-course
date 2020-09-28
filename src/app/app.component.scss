@@ -37,6 +37,10 @@
   }
 }
 
+.mat-drawer-container {
+  height: 100vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,4 +48,10 @@ html {
 body {
   background: #212121;
   color: #ffffff;
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
 }
