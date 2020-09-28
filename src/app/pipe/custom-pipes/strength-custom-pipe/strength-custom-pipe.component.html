@@ -1,0 +1,25 @@
+<h3 id="strengthCustomPipe">Strength Custom Pipe</h3>
+<p>
+  If you are declear custome pipe to app.module.ts file. Then don't need to
+  exports
+</p>
+<visual-d>
+  <p>Power {{ 2 | strength: 10 }}</p>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>{{ dataHTML }}</div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="strength.pipe.ts">
+    <code-component>
+      <div #codeData>{{ dataTS }}</div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="child.module.ts">
+    <code-component>
+      <div #codeData>{{ dataModuleTS }}</div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,46 @@
+<h3 id="filterCustomPipe">Filter Custom Pipe</h3>
+<p>
+  If you are declear custome pipe to app.module.ts file. Then don't need to
+  exports
+</p>
+<visual-d>
+  <div class="form-group">
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Filter"
+      [(ngModel)]="term"
+    />
+  </div>
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Joining Date</th>
+      <th>Age</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of list | filter: term">
+        <td>{{ user.name }}</td>
+        <td>{{ user.joining_date }}</td>
+        <td>{{ user.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>{{ dataHTML }}</div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="strength.pipe.ts">
+    <code-component>
+      <div #codeData>{{ dataTS }}</div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="child.module.ts">
+    <code-component>
+      <div #codeData>{{ dataModuleTS }}</div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>

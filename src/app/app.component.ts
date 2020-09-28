@@ -106,6 +106,22 @@ export class AppComponent {
           name: 'Currency Pipe',
           path: 'currency-pipe',
         },
+        {
+          name: 'Decimal Pipe',
+          path: 'decimal-pipe',
+        },
+        {
+          name: 'Percent Pipe',
+          path: 'percent-pipe',
+        },
+        {
+          name: 'Strength Custom Pipe',
+          path: 'strengh-custom-pipe',
+        },
+        {
+          name: 'Filter Custom Pipe',
+          path: 'filter-custom-pipe',
+        },
       ],
     },
   ];

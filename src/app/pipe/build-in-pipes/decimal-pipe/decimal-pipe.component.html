@@ -1,0 +1,45 @@
+<h3 id="decimalPipe">Decimal Pipe</h3>
+<visual-d>
+  <p>{{ num2 | number }}</p>
+  <p>{{ num2 | number: "3.1-5" }}</p>
+  <p>{{ num2 | number: "4.5-5" }}</p>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>
+        {{ decimalP }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ decimalPTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
+
+<h4 id="decimalPipewithTS">Decimal Pipe with TS</h4>
+<visual-d>
+  <p>{{ onlyNumber }}</p>
+  <p>{{ numberWithlength }}</p>
+  <p>{{ numberWithlength2 }}</p>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>
+        {{ decimalTSP }}
+      </div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="TS">
+    <code-component>
+      <div #codeData>
+        {{ decimalTSPTS }}
+      </div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>

@@ -6,19 +6,13 @@ import { BasicComponent } from './basic/basic.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
-import {
-  HighlightModule,
-  HIGHLIGHT_OPTIONS,
-} from 'ngx-highlightjs';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import * as hljs from 'highlight.js';
 import { SharedModule } from './shared/shared.module';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BasicComponent,
-  ],
+  declarations: [AppComponent, BasicComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,4 +39,4 @@ import { SharedModule } from './shared/shared.module';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
