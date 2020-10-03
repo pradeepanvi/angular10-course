@@ -5,9 +5,10 @@ import { RoutingRoutingModule } from './routing-routing.module';
 import { DesComponent } from './des/des.component';
 import { BasicRoutingComponent } from './basic-routing/basic-routing.component';
 import { WildcardRoutingComponent } from './wildcard-routing/wildcard-routing.component';
+import { RedirectRoutingComponent } from './redirect-routing/redirect-routing.component';
 
 @NgModule({
-  declarations: [DesComponent, BasicRoutingComponent, WildcardRoutingComponent],
+  declarations: [DesComponent, BasicRoutingComponent, WildcardRoutingComponent, RedirectRoutingComponent],
   imports: [CommonModule, RoutingRoutingModule, SharedModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

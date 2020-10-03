@@ -130,6 +130,7 @@ export class AppComponent {
       routingChildren: [
         { name: 'Basic Routing', path: 'basic-routing' },
         { name: 'Wild Card Routing', path: 'wildcard' },
+        { name: 'Redirect Routing', path: 'redirect' },
       ],
     },
   ];

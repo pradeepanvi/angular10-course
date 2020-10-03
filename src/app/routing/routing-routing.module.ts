@@ -7,6 +7,7 @@ import { BasicRoutingComponent } from './basic-routing/basic-routing.component';
 import { DesComponent } from './des/des.component';
 import { RoutingComponent } from './routing.component';
 import { WildcardRoutingComponent } from './wildcard-routing/wildcard-routing.component';
+import { RedirectRoutingComponent } from './redirect-routing/redirect-routing.component';
 
 const route: Routes = [
   {
@@ -24,6 +25,7 @@ const route: Routes = [
         ],
       },
       { path: 'wildcard', component: WildcardRoutingComponent },
+      { path: 'redirect', component: RedirectRoutingComponent },
     ],
   },
 ];
