@@ -1,7 +1,11 @@
 <mat-drawer-container>
   <mat-drawer #drawer mode="push" (click)="drawer.toggle()">
     <ul>
-      <li *ngFor="let route of routing">
+      <li
+        *ngFor="let route of routing"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         <a [routerLink]="route.path">{{ route.name }}</a>
         <ul *ngIf="route.children?.length > 0">
           <li *ngFor="let subRoute of route.children">
@@ -46,7 +50,11 @@
       <div class="row">
         <div class="col-md-4 col-lg-3 bs-sidebar d-none d-md-block">
           <ul>
-            <li *ngFor="let route of routing">
+            <li
+              *ngFor="let route of routing"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
               <a [routerLink]="route.path">{{ route.name }}</a>
               <ul *ngIf="route.children?.length > 0">
                 <li *ngFor="let subRoute of route.children">

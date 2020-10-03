@@ -13,6 +13,14 @@
           a {
             color: hsla(0, 0%, 100%, 0.5);
           }
+          &.active {
+            & > a {
+              font-weight: bold;
+            }
+            a {
+              color: #ffffff;
+            }
+          }
           ul {
             padding-left: 15px;
             li {
