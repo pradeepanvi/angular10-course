@@ -9,10 +9,11 @@ import { MaterialModule } from './shared/material.module';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import * as hljs from 'highlight.js';
 import { SharedModule } from './shared/shared.module';
+import { RoutingComponent } from './routing/routing.component';
 (document.defaultView as any).hljs = hljs;
 
 @NgModule({
-  declarations: [AppComponent, BasicComponent],
+  declarations: [AppComponent, BasicComponent, RoutingComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

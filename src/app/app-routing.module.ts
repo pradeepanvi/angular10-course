@@ -33,6 +33,11 @@ const routes: Routes = [
     loadChildren: () => import('./pipe/pipe.module').then((m) => m.PipeModule),
   },
   {
+    path: 'routing',
+    loadChildren: () =>
+      import('./routing/routing.module').then((m) => m.RoutingModule),
+  },
+  {
     path: '**',
     component: BasicComponent,
   },

@@ -124,5 +124,9 @@ export class AppComponent {
         },
       ],
     },
+    {
+      name: 'Routing',
+      path: 'routing',
+    },
   ];
 }

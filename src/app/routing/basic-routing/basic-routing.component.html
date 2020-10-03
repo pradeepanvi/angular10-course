@@ -1,0 +1,23 @@
+<h2>Basic Routing</h2>
+<visual-d>
+  <a routerLink="home">Home</a> | <a routerLink="about">About</a> |
+  <a routerLink="contact">Contact</a>
+  <router-outlet></router-outlet>
+</visual-d>
+<mat-tab-group>
+  <mat-tab label="HTML">
+    <code-component>
+      <div #codeData>{{ dataHTML }}</div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="routing.module.ts">
+    <code-component>
+      <div #codeData>{{ dataTS }}</div>
+    </code-component>
+  </mat-tab>
+  <mat-tab label="app.module.ts">
+    <code-component>
+      <div #codeData>{{ dataModuleTS }}</div>
+    </code-component>
+  </mat-tab>
+</mat-tab-group>
