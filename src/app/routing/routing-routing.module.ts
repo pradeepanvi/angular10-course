@@ -6,6 +6,7 @@ import { HomeComponent } from './basic-routing/home/home.component';
 import { BasicRoutingComponent } from './basic-routing/basic-routing.component';
 import { DesComponent } from './des/des.component';
 import { RoutingComponent } from './routing.component';
+import { WildcardRoutingComponent } from './wildcard-routing/wildcard-routing.component';
 
 const route: Routes = [
   {
@@ -22,6 +23,7 @@ const route: Routes = [
           { path: 'contact', component: ContactComponent },
         ],
       },
+      { path: 'wildcard', component: WildcardRoutingComponent },
     ],
   },
 ];
