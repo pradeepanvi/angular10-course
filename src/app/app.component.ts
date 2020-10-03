@@ -131,6 +131,7 @@ export class AppComponent {
         { name: 'Basic Routing', path: 'basic-routing' },
         { name: 'Wild Card Routing', path: 'wildcard' },
         { name: 'Redirect Routing', path: 'redirect' },
+        { name: 'Nesting Routes', path: 'nesting-routes' },
       ],
     },
   ];
